@@ -1,1 +1,24 @@
+session.invalidate() : 세션을 무요화시킴 소멸(x)
 
+
+ex)
+<!DOCTYPE html>
+<style>
+	html, body{
+		height: 100%;
+	}
+</style>
+<html>
+<meta charset="utf-8">
+<head>
+	<%@ include file="../Frame/Header.jsp"%>
+</head>
+<body style="background-color: #f4f4f4; overflow-x: hidden;">
+	<%@ include file="../Frame/Menu.jsp" %>
+</body>
+	<script type="module" src="Join.js"></script>
+    <%
+        request.getSession().invalidate();          세션소멸후
+        response.sendRedirect("../Main/Main.jsp");  메인페이지로 이동
+    %>
+</html>
