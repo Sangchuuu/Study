@@ -7,3 +7,21 @@ setInterval(func, delay, arg0)
 setInterval(func, delay, arg0, arg1)
 setInterval(func, delay, arg0, arg1, /* … ,*/ argN)
 delay parameter mean millisecond
+
+Sample Code 
+ This code get current date and change the text every 1sec.
+ 1000ms = 1sec
+function GetDate()
+{
+    var toTime = new Date();
+    var curTime=toTime.toString();
+    var curTimeArr = curTime.split(" ");
+
+    var gmt = curTimeArr[5];
+    curTime = curTimeArr[4];
+    document.getElementById('CurTimeTxt').innerText = curTime;
+    document.getElementById('GmtInfo').innerText = gmt;
+    document.getElementById('CurGMTTxt').innerText = gmt;
+    
+}
+setInterval(GetDate,1000)
