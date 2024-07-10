@@ -1,0 +1,8 @@
+신버전으로 프로젝트 만들다가
+import javax.servlet 
+org.OOO
+이런 부분들이 
+"The import org cannot be resolved" 뭐 이런식의 오류를 띄웠고
+빌드패스에서 라이브러리에 톰캣을 다시 넣어봐도 해결이 안돼서 찾다보니
+tomcat폴더안에 lib에 해당하는 라이브러리.jar파일이 없어서 해당 라이브러리를 가져올수 없는 문제였다.
+인터넷에서 해당하는 라이브러리를 찾아 집어넣고 해결
