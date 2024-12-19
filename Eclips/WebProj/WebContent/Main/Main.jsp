@@ -7,6 +7,7 @@
 <title>James Web</title>
 </head>
 <body>
-
+	<%@include file="./Include.jsp" %>
+	<%@include file="../Frame/Header.jsp" %>
 </body>
 </html>
