@@ -5,11 +5,12 @@
 	background-color: black;
 	height: 70px;
 	display: inline-flex;
+    align-items: center;
 }
 .HMenu{
 	height: 100%;	
     display: inline-flex;
-    justify-content: center;
+    align-items: center;
 }
 body{
 	margin: 0;

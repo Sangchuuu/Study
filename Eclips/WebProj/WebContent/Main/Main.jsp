@@ -9,5 +9,6 @@
 <body>
 	<%@include file="./Include.jsp" %>
 	<%@include file="../Frame/Header.jsp" %>
+	<%@include file="../Frame/Menu.jsp" %>
 </body>
 </html>
