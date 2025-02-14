@@ -1,0 +1,44 @@
+자바 개발자 버전 설치
+톰켓9.0설치
+1. 이클립스 설치
+1-1 이클립스 설치후 black theme 설치 (Eclipse Marketplace : Darkest Dark Theme with DevStyle)
+
+
+
+2. Visual Studio Code 설치
+2-1 Vscode Extensions : Extension Pack for Java 설치
+2-3 Korean Language Pack for Visual Studio Code 설치 (디버깅 혹은 콘솔 로그 시 한국어 지원 안깔면 한국어 깨질때도있음)
+ㄴF1 configure display language 설정 변경(명령 팔레트
+
+
+
+
+3. Node.js 설치
+3-1 Node.js 설치후 환경변수 적용
+//3-1-1 사용자 변수 -> path 편집 -> (설치경로) ex)C:\Program Files\nodejs\ 추가
+
+4. 타입스크립트 환경 구성 및 실행
+npmlist 문서 확인 (명령어)
+ㄴ명령 팔레트) 콘솔창 활성화 ->select default profile
+
+npm install typescript //타입스크립트 로컬 설치
+npx tsc -v // 타입스크립트 버전
+npx tsc --init //타입스크립트 tsconfig.json 생성
+npx tsc // 타입스크립트 빌드
+npx tsc -w // 저장시 바로바로 빌드되기
+
+
+
+추가 설정 하면 좋은것들
+
+1. 이클립스 -> window -> preferences -> general -> editors -> File Assosiations 에서
+각 연결할 확장자 (ex) .jsp / .js / .ts / .html 등) 을 선택하고 아래쪽 assosicated editor 쪽에서 add 눌러서 
+visual studio code 원본 파일 을 선택 확인 을 누르고 default 를 눌러서 디폴트 등록을하면 이클립스 탐색기에서
+더블클릭 실행시 vscode 로 바로 실행됨.
+
+2. 이클립스 -> window -> preferences -> general -> workspace 에서 Refresh using native hooks or polling 을 체크하면
+vscode 에서 수정한 내용들이 바로바로 이클립스 에서 확인 가능함.
+
+*최종 연동후  VS에서 폴더 경로를 워크 스페이스로 지정하면 파일 트리를 자동 인식함
+
+
