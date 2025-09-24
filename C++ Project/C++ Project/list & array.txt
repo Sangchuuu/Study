@@ -1,8 +1,0 @@
-Difference between List and Array 
-1. Array
- Array is line type data structure.
- It saves datas countinuously at memory.
- for example, if first data saved at 0x01, next data will save at 0x02
-
-2. List
- List is 
