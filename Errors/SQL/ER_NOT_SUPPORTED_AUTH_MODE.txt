@@ -1,0 +1,19 @@
+code: 'ER_NOT_SUPPORTED_AUTH_MODE',
+    errno: 1251,
+    sqlMessage: 'Client does not support authentication protocol requested by server; consider upgrading MySQL client',
+    sqlState: '08004',
+
+state
+    const mysql = require("mysql");
+    
+fix
+    const mysql = require("mysql2");
+
+이전버전의 API를 사용하고 있었음 mysql2로 바꿔서 변경완료
+
+차이점 : 
+    mysql : 콜백(CallBack)기반
+    mysql2 : 콜백(CallBack)과 PromiseApi를 모두 지원함(비동기 개발 방식)
+    성능 : mysql2가 더 빠르며 복잡한 쿼리나 대량 데이터를 처리하는데 성능이 뛰어남
+    보안 : mysql2는 Prepared Statements 를 기본적으로 지원에 Injection 공격을 방어하기 용이함
+    특별한 이유가 없으면 mysql2를 사용하면됨

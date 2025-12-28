@@ -1,0 +1,9 @@
+Source Ip : 
+    데이터 패킷이 출발하는 출발지 ip 주소 (즉 패킷을 보내는 측 ip주소)
+    The Source Ip is the starting point for a data packet
+
+Destination Ip : 
+    데이터 패킷이 도착해야할 대상 ip 주소(즉 패킷을 받는 측 ip주소)
+    The Destination Ip is the target point for a data packet
+    
+ip헤더의 필수정보 : 

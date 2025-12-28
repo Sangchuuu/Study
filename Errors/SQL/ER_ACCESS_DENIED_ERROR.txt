@@ -1,0 +1,21 @@
+code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'user'@'localhost' (using password: YES)",
+  sql: undefined
+
+state
+    const mysql = require("mysql");
+    const connection = mysql.createConnection({
+      host: 'localhost',
+      port: '3306',
+      user: 'user',
+      password: 'Fkrmsk2472@',
+      database: 'webproj'
+    });
+
+fix
+    user: 'root',
+    내 DB의 user은 root였음 잘못된 user칸을 잘못 입력
+    비밀번호가 틀렸을때도 이 에러가 발생함
+      

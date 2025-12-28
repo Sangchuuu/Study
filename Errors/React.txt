@@ -1,0 +1,6 @@
+Notice.tsx:62 Each child in a list should have a unique "key" prop.
+    map으로 여러 JSX를 렌더링할 때는 각 요소에 고유한 key값이 필요함.
+    key값은 절대 겹치며 ㄴ안됨
+    <NoticeList key={_row.Index} _idx={ _row.Index} _con={_row.Content}></NoticeList>
+    로 해결 원래는 key 값이 빠져있었음
+

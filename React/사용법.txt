@@ -1,0 +1,57 @@
+라우팅하는법{   
+    외부 페이지 이동 : window.location.href (전체 새로고침됨 따라서 React를 쓰는 장점이 사라진다)
+    React Router (SPA)를 사용하면 새로고침 없이 내부 페이지 이동이 가능하다
+
+
+    react에서는 보통 react-router-dom을 이용해서 이동을 처리
+    npm install react-router-dom으로 라이브러리설치
+    main.tsx나 index.tsx에 
+        import { BrowserRouter } from "react-router-dom";
+            <BrowserRouter>
+            <App />
+            </BrowserRouter>
+    
+    다음 App.tsx에서 페이지 라우팅함
+        import { Routes, Route } from "react-router-dom";
+        <Routes>
+            <Route path='/' element={<Home />}></Route>
+            <Route path='/Profile' element={<Profile />}></Route>
+        </Routes>
+    
+    페이지 이동하는법
+        import { Link, NavLink } from "react-router-dom";
+            <li className="nav-item">
+                <NavLink className="nav-link" to ={"/"+_name}>{_name}</NavLink>
+            </li>
+}
+
+배포{
+    npm run build로 배포함
+    실행하면 dist폴더가 생김
+    dist폴더안에 자동으로 생성되어 내용이 들어감
+
+    안에서 변경돼서 내가 이 변경된것을을 배포하고 싶을때만 npm run build를 하면 됨
+    
+    buld를 안하면 Vite dev server에서는 변경되지만 빌드서버에서는 안생김
+    eclipse프로젝트할때 변경사항 서버에 안올린것과 같음
+    Java로 보면 빌드 안해서 class파일에 변경된것 없고 서버에도 안올린격
+}
+
+서버연동{
+    1. nodejs 설치
+    2. npm install express
+    3. 프로젝트 폴더에 server.js생성
+    4. server.js 내용입력
+    6. npm install cors로 cors이슈를 해결해야함
+    5. npm run build로 빌드
+    6. npm server.js로 서버실행
+}
+
+React는 일반변수의 변경을 감지못한다.
+그래서 값이 바뀌어도 리렌더링이 되지 않는다.
+const variable = Array<any>[](x)
+따라서 useState를 사용해서 const [variable] = useState<Array<any>>([]);이렇게해야함
+
+let noticeData : Array<any> = useState<Array<any>>();(x)
+useState는 배열을 반환함
+const[noticeData, setNoticeData] = useState([]);(o)

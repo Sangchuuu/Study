@@ -1,0 +1,5 @@
+Error: connect ECONNREFUSED Adress
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+
+express서버가 안열려있어서 발생했음
+

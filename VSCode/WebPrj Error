@@ -1,0 +1,16 @@
+1. npm init 작동안함
+  오류코드 npm : 'npm' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인식되지 않습니다. 
+          이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도하십시오.
+          ObjectNotFound: (npm:String) [], CommandNotFoundException
+  원인 : node 설치가 안돼있었음
+  해결 : node 설치 >> 환경변수 C:\Users\wjdgn\AppData\Roaming\npm 있나확인
+  확인후 node -v, npm -v
+
+2. npm -v 작동안함
+  오류코드 npm : 이 시스템에서 스크립트를 실행할 수 없으므로 C:\Program Files\nodejs\npm.ps1 파일을 로드할 수 없습니다. 
+          자세한 내용은 about_Execution_Policies (https://go.microsoft.com/fwlink/?LinkID=135170)를 참조하십시오.
+          : 보안 오류: (:) [], PSSecurityException
+  원인 : PowerShell에서 확장자 .ps1(스크립트파일) 실행을 차단함.
+  해결 : Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+        본인이 만든 스크립트, 신뢰된 서명만 스크립트만 허용하는 설정
+  
